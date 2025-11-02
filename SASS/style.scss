@@ -1,0 +1,21 @@
+@import 'variables';
+@import 'mixins';
+@import 'animations';
+// mobile first/
+main {
+    width: 100%;
+}
+body {
+    width: 100%;
+    #first-logo {
+    display: flex;
+    align-items: center;
+    width: 55%;
+    margin: auto;
+}
+.location {
+  @include flex-center;
+}
+
+
+}
