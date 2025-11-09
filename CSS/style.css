@@ -1,17 +1,116 @@
-/* Error: Undefined mixin.
- *    ,
- * 17 |   @include flex-center;
- *    |   ^^^^^^^^^^^^^^^^^^^^
- *    '
- *   SASS\style.scss 17:3  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a    \2577 \a 17 \2502    @include flex-center;\d\a    \2502    ^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   SASS\\style.scss 17:3  root stylesheet";
+* {
+  outline: 1px solid red;
 }
+
+main {
+  margin: 0;
+  background-color: #F6F6F6;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+#first-logo {
+  display: flex;
+  align-items: center;
+  width: 55%;
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  margin: auto;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+header #first-logo {
+  width: 52%;
+  font-family: "Shrikhand", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 5%;
+}
+
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background-color: #F6F6F6;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+}
+.location h2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.hero h1 {
+  width: 83%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  text-align: center;
+}
+.hero .div-intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.hero .div-intro .text-intro {
+  width: 84%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: lighter;
+}
+.hero button {
+  width: 60%;
+  height: 50px;
+  border-radius: 25px;
+  background: linear-gradient(357deg, #9356DC 0%, #FF79DA 100%);
+  color: white;
+  font-size: 16px;
+  border: none;
+}
+
+.how-it-works {
+  background-color: white;
+  height: 440px;
+  padding-left: 6%;
+  padding-top: 10px;
+}
+.how-it-works .card-how-it-works {
+  height: 330px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.how-it-works .card-how-it-works .card-choose {
+  background-color: #F6F6F6;
+  width: 92%;
+  height: 73px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.how-it-works .card-how-it-works .card-choose svg {
+  display: flex;
+  justify-content: start;
+  position: absolute;
+  left: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */
