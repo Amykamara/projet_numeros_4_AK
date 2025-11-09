@@ -23,7 +23,7 @@ body {
 header {
   width: 100%;
   margin: auto;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+// box-shadow: 0px 4px 4px rgb(0, 0, 0);
   #first-logo {
   width: 52%;
   font-family: $font-title;
@@ -40,6 +40,8 @@ header {
   font-family: $font-text;
     font-weight: normal;
     font-size: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0,1, 0.12);
+  
   h2{
     width: 100%;
 @include set-up;
@@ -53,11 +55,12 @@ header {
   @include set-up;
   margin: auto;
   text-align: center;
-  
+    padding-top: 15px;
   }
   .div-intro {
 @include set-up;
     flex-direction: column;
+      padding-bottom: 50px;
 
 .text-intro {
   width: 84%;
@@ -77,20 +80,24 @@ border: none;
 .how-it-works {
   background-color: white;
     height: 440px;
-  padding-left: 6%;
+  padding-left: 23px;
     padding-top: 10px;
   .card-how-it-works {
 // width: 100%;
   height: 330px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-around;  
+  .card-icone {
+  margin: 40px;
+  }
   .card-choose {
-background-color: $background-color;
+  background-color: $background-color;
   width: 92%;
   height: 73px;
   border-radius: 20px;
   @include set-up ;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   svg {
     display: flex;
     justify-content: start;
@@ -98,8 +105,111 @@ background-color: $background-color;
     left: 10px;
   }
 }
+  .card-menu {
+background-color: $background-color;
+  width: 92%;
+  height: 73px;
+  border-radius: 20px;
+  @include set-up ;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+  svg {
+    display: flex;
+    justify-content: start;
+    position: absolute;
+    left: 10px;
+
+  }       
+
+}
+ .card-enjoy{
+background-color: $background-color;
+  width: 92%;
+  font-size: 16px;
+  height: 73px;
+  border-radius: 20px;
+  @include set-up ;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+  svg {
+    display: flex;
+    justify-content: start;
+    position: absolute;
+    left: 10px;
+  }
   }
 }
+}
 
+.restaurants {
+  background-color: $background-color;
+  padding-left: 6%;
+    padding-bottom: 15px;
+  h2 {
+    width: 80%;
+  }
+.card{
+  width: 96%;
+  img {
+    width: 100%;
+    height: 180px; 
+  object-fit: cover;
+    border-radius: 15px 15px 0 0 ;
+    overflow: hidden;
+}
+.new-svg {
+ position: relative;
+  top: 50px;
+  right: 0px;
+  height: 37px;
+  z-index: 1;
+  left: 232px;
+}
+.card-content {
+  background-color: white;
+border-radius: 0 0 15px 15px;
+  margin-top: -22px;
+    padding-top: 15px;
+}
+
+h3 {
+  width: 95%;   
+  display: flex;
+  gap: 140px;
+  padding-left: 15px;
+    margin-bottom: 0px;
+.heart {
+  display: flex;
+  justify-content: end;
+}}
+.card-txt {
+  font-weight: lighter;
+  padding-left: 15px;
+  padding-bottom: 2px;
+  margin-bottom: 25px;
+}
+  }
+}
+footer {
+  background-color: $footer-background;
+    padding-left: 6%;
+      padding-top: 15px;
+h2 {
+    color: $font-color;
+    font-family: $font-title;
+    font-size:18px ;
+    width: 85%;
+    margin-top: 0px;  
+      font-style: normal;
+
+}
+.footer-div {
+    @include set-up-column;
+  color: #FFFFFF;
+}
+svg {
+    padding-right: 10px;
+}
+}
 
 
