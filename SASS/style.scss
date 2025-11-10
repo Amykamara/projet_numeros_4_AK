@@ -1,5 +1,7 @@
 @import 'variables';
 @import 'mixins';
+@import 'animations';
+
 
 // mobile first/
 * {
@@ -23,7 +25,7 @@ body {
 header {
   width: 100%;
   margin: auto;
-// box-shadow: 0px 4px 4px rgb(0, 0, 0);
+  box-shadow: 0 6px 15px rgba(0, 0,1, 0.12);
   #first-logo {
   width: 52%;
   font-family: $font-title;
@@ -32,7 +34,14 @@ header {
   padding: 5%;
 }
 
+  h1 {
+  font-family: $font-title;
+  @include set-up
+
+  }
 }
+
+
 .location { 
   @include set-up;
   margin:auto;
@@ -50,7 +59,7 @@ header {
 }
  .hero {
   
-  h1 {
+  h2 {
     width: 83%;
   @include set-up;
   margin: auto;
@@ -154,6 +163,7 @@ background-color: $background-color;
     width: 100%;
     height: 180px; 
   object-fit: cover;
+    object-position: center 62%;
     border-radius: 15px 15px 0 0 ;
     overflow: hidden;
 }
@@ -168,20 +178,60 @@ background-color: $background-color;
 .card-content {
   background-color: white;
 border-radius: 0 0 15px 15px;
-  margin-top: -22px;
+  // margin-top: -22px;
     padding-top: 15px;
+  margin-top: -4px;
+}
+.card-title{
+display: flex;
+align-items: center;
+justify-content: space-between;
+width: 90%;
+  margin-bottom: 0px;
+  height: 20px;
+  margin: auto;
+}
+.like-1 {
+  display: none;
+}
+.like-2 {
+  display: none;
+}
+.like-3 {
+  display: none;
+}
+.like-4{
+  display: none;
 }
 
-h3 {
-  width: 95%;   
-  display: flex;
-  gap: 140px;
-  padding-left: 15px;
-    margin-bottom: 0px;
 .heart {
-  display: flex;
-  justify-content: end;
-}}
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.heart-path {
+  fill: none; 
+  stroke: #101010;
+  stroke-width: 1;
+  transition: all 0.3s ease-in-out;
+}
+.like-1:checked + label .heart-path {
+  fill: url(#heartGradient); 
+  stroke: none;
+}
+.like-2:checked + label .heart-path {
+  fill: url(#heartGradient); 
+  stroke: none;
+
+}
+.like-3:checked + label .heart-path {
+  fill: url(#heartGradient); 
+  stroke: none;
+}
+.like-4:checked + label .heart-path {
+  fill: url(#heartGradient); 
+  stroke: none;
+}
 .card-txt {
   font-weight: lighter;
   padding-left: 15px;
@@ -200,7 +250,7 @@ h2 {
     font-size:18px ;
     width: 85%;
     margin-top: 0px;  
-      font-style: normal;
+      // font-style: normal;
 
 }
 .footer-div {

@@ -10,20 +10,15 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&family=Young+Serif&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
     <header>
-      <img
-        id="first-logo"
-        src="assets/Images_et_textes_Ohmyfood/images/logo/ohmyfood.png"
-        alt="Logo Ohmyfood"
-      />
+      <title>Ohmyfood</title>
+      <h1>Ohmyfood</h1>
     </header>
     <main>
       <section>
@@ -31,7 +26,6 @@
           <h2>
             <svg
               class="icon-location"
-              ="12"
               height="16"
               viewBox="0 0 12 16"
               fill="none"
@@ -46,7 +40,7 @@
         </div>
       </section>
       <section class="hero">
-        <h1>Réservez le menu qui vous convient</h1>
+        <h2>Réservez le menu qui vous convient</h2>
         <div class="div-intro">
           <p class="text-intro">
             Découvrez des restaurants d’exception, sélectionnés par nos soins.
@@ -201,25 +195,42 @@
           </svg>
           <img
             src="assets/Images_et_textes_Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-            alt="Image d'un plat"
+            alt="Plat servi au restaurant La palette du goût"
           />
 
           <div class="card-content">
             <div class="card-title">
-              <h3>La palette du goût
-              <svg
-                class="heart"
-                width="22"
-                height="21"
-                viewBox="0 0 22 21"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C22.0187 4.12419 22.1558 8.32368 19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
-                  stroke="#101010"
-                />
-              </svg>
+              <h3>La palette du goût</h3>
+              <input type="checkbox" id="like-1" class="like-1" />
+              <label for="like-1">
+                <svg
+                  class="heart"
+                  width="22"
+                  height="21"
+                  viewBox="0 0 22 21"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <defs>
+                    <linearGradient
+                      id="heartGradient"
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="100%"
+                    >
+                      <stop offset="0%" stop-color="#9356DC" />
+                      <stop offset="100%" stop-color="#FF79DA" />
+                    </linearGradient>
+                  </defs>
+
+                  <path
+                    class="heart-path"
+                    d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C22.0187 4.12419 22.1558 8.32368 19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
+                    stroke="#101010"
+                  />
+                </svg>
+              </label>
             </div>
             <div class="card-txt">
               <p>Ménilmontant</p>
@@ -244,7 +255,7 @@
             />
             <defs>
               <filter
-                id="filter0_d_270287_514"
+                id="filter1_d_270287_514"
                 x="0"
                 y="0"
                 width="88"
@@ -281,25 +292,42 @@
           </svg>
           <img
             src="assets/Images_et_textes_Ohmyfood/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
-            alt="Image d'un plat"
+            alt="Plat servi au restaurant La note enchantée"
           />
 
           <div class="card-content">
             <div class="card-title">
-              <h3>La note enchantée
-              <svg
-                class="heart"
-                width="22"
-                height="21"
-                viewBox="0 0 22 21"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C22.0187 4.12419 22.1558 8.32368 19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
-                  stroke="#101010"
-                />
-              </svg>
+              <h3>La note enchantée</h3>
+              <input type="checkbox" id="like-2" class="like-2" />
+              <label for="like-2">
+                <svg
+                  class="heart"
+                  width="22"
+                  height="21"
+                  viewBox="0 0 22 21"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <defs>
+                    <linearGradient
+                      id="heartGradient"
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="100%"
+                    >
+                      <stop offset="0%" stop-color="#9356DC" />
+                      <stop offset="100%" stop-color="#FF79DA" />
+                    </linearGradient>
+                  </defs>
+
+                  <path
+                    class="heart-path"
+                    d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C22.0187 4.12419 22.1558 8.32368 19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
+                    stroke="#101010"
+                  />
+                </svg>
+              </label>
             </div>
             <div class="card-txt">
               <p>Charonne</p>
@@ -307,8 +335,7 @@
           </div>
         </article>
 
-              <article class="card">
-          
+        <article class="card">
           <img
             src="assets/Images_et_textes_Ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
             alt="Image d'un plat"
@@ -316,28 +343,44 @@
 
           <div class="card-content">
             <div class="card-title">
-              <h3>À la française
-              <svg
-                class="heart"
-                width="22"
-                height="21"
-                viewBox="0 0 22 21"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C22.0187 4.12419 22.1558 8.32368 19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
-                  stroke="#101010"
-                />
-              </svg>
+              <h3>À la française</h3>
+              <input type="checkbox" id="like-3" class="like-3" />
+              <label for="like-3">
+                <svg
+                  class="heart"
+                  width="22"
+                  height="21"
+                  viewBox="0 0 22 21"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <defs>
+                    <linearGradient
+                      id="heartGradient"
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="100%"
+                    >
+                      <stop offset="0%" stop-color="#9356DC" />
+                      <stop offset="100%" stop-color="#FF79DA" />
+                    </linearGradient>
+                  </defs>
+
+                  <path
+                    class="heart-path"
+                    d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C22.0187 4.12419 22.1558 8.32368 19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
+                    stroke="#101010"
+                  />
+                </svg>
+              </label>
             </div>
             <div class="card-txt">
               <p>Cité Rouge</p>
             </div>
           </div>
         </article>
-                <article class="card">
-          
+        <article class="card">
           <img
             src="assets/Images_et_textes_Ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
             alt=""
@@ -345,23 +388,40 @@
 
           <div class="card-content">
             <div class="card-title">
-              <h3>La note enchantée
-              <svg
-                class="heart"
-                width="22"
-                height="21"
-                viewBox="0 0 22 21"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C22.0187 4.12419 22.1558 8.32368 19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
-                  stroke="#101010"
-                />
-              </svg>
+              <h3>Le délice des sens</h3>
+              <input type="checkbox" id="like-4" class="like-4" />
+              <label for="like-4">
+                <svg
+                  class="heart"
+                  width="22"
+                  height="21"
+                  viewBox="0 0 22 21"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <defs>
+                    <linearGradient
+                      id="heartGradient"
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="100%"
+                    >
+                      <stop offset="0%" stop-color="#9356DC" />
+                      <stop offset="100%" stop-color="#FF79DA" />
+                    </linearGradient>
+                  </defs>
+
+                  <path
+                    class="heart-path"
+                    d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C22.0187 4.12419 22.1558 8.32368 19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
+                    stroke="#101010"
+                  />
+                </svg>
+              </label>
             </div>
             <div class="card-txt">
-              <p>Charonne</p>
+              <p>Folie-Méricourt</p>
             </div>
           </div>
         </article>

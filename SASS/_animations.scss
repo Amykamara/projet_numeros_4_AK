@@ -1,4 +1,17 @@
-// @keyframes heart-click {
     
-//     opacity: 
-// }
+@keyframes heart-click {
+  from {
+    opacity: 0.3;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+// @keyframes button-annime 
+// { from {
+//     transform: translateX(0%) } 
+// to { transform: translateX(100%);
+//     } }
