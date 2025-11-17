@@ -358,10 +358,93 @@ h2{
 svg {
     padding-right: 10px;
 }
-
 }
 }
+// La palette du goût
+.head{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 39px;
+  padding-left: 25px;
+    height: 63px;
 
+}
+// header{
+//   .page-1 {
+//       padding-left: 23px;
+//   }
+// }
 
+.la-palette-du-gout-img { 
+  width: 100%;}
+.card-background {
+  border-radius: 35px 35px 0px 0px;
+    margin-top: -55px;
+    background-color: $background-color;
+      position: relative;
+  h1 {
+  font-family: $font-title;
+  font-size: 28px;
+  }
+.big-title {
+  @include set-up;
+  gap: 25px;
+  padding-top: 16px;
+  padding-bottom: 30px;
+}
+  .heart {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
 
+.heart-path {
+  fill: none; 
+  stroke: #101010;
+  stroke-width: 1;
+  transition: all 0.3s ease-in-out;
+}
+.like-5:checked + label .heart-path {
+  fill: url(#heartGradient); 
+  stroke: none;
+}
+.like-5{
+  display: none;
+}
+}
+.border-aqua {
+  border-bottom: solid 2px $tertiary-color;
+  width: 17%;
+  padding-left: 0px;
+    margin-left: 27px;
+.menu-title {
+  margin-top: 0px;
+  padding-left: 0px;
+  font-family: $font-text;
+  font-weight: lighter;
+  font-size: 16px;
+}
+}
+.starter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+    padding-top: 25px;
+}
+ .card-menu {
+  width: 92%;
+  height: 73px;
+  border-radius: 20px;
+    background-color: white;
+// border-radius:  15px;
+h3 {
+  margin: 0;
+    padding-left: 13px;
+}
+p {
+    padding-left: 13px;
+}
 
+} 
