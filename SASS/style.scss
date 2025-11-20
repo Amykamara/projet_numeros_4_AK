@@ -250,6 +250,9 @@ footer {
   background-color: $footer-background;
   padding-left: 6%;
   padding-top: 15px;
+  color: white;
+  font-size: 16px;
+  font-family: roboto;
 h2 {
   color: $font-color;
   font-family: $font-title;
@@ -263,6 +266,7 @@ h2 {
 a {
   text-decoration: none;
   color: #FFFFFF;
+    margin: 10px;
 }
 }
 svg {
@@ -368,7 +372,6 @@ svg {
   gap: 39px;
   padding-left: 25px;
     height: 63px;
-
 }
 // header{
 //   .page-1 {
@@ -413,8 +416,8 @@ svg {
 }
 }
 .border-aqua {
-  border-bottom: solid 2px $tertiary-color;
-  width: 17%;
+  border-bottom: solid 2.5px $tertiary-color;
+  width: 40px;
   padding-left: 0px;
     margin-left: 27px;
 .menu-title {
@@ -423,28 +426,72 @@ svg {
   font-family: $font-text;
   font-weight: lighter;
   font-size: 16px;
+    margin-bottom: 5px;
 }
 }
 .starter {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
-  align-items: center;
-    padding-top: 25px;
+@include cards-menu;
 }
  .card-menu {
   width: 92%;
   height: 73px;
   border-radius: 20px;
     background-color: white;
-// border-radius:  15px;
+  position: relative;
 h3 {
   margin: 0;
     padding-left: 13px;
+      padding-top: 10px;
+      font-size: 18px;
+      font-family: $font-text;
 }
 p {
     padding-left: 13px;
+    display: flex;
+  justify-content: space-between;
+    margin-top: 10px;
+    font-family: $font-text;
+    font-size: 15.04px;
+  font-weight: lighter;
 }
+span {
+    padding-right: 15px;
+    font-weight: bold;
+}
+// .select-btn1 {
 
+// }
 } 
+.box {
+  @include box;
+}
+//////
+.mains{
+@include cards-menu;
+}
+.desserts {
+  @include cards-menu;
+}
+.btn-section {
+padding-top: 40px;
+  padding-bottom: 40px;
+}
+.menu-Button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 50px;
+  border-radius: 25px;
+  background: linear-gradient(357deg, #9356DC 0%, #FF79DA 100%);
+    margin: auto;
+  a {
+    text-decoration: none;
+    color: white;
+  font-size: 16px;
+  border: none;
+  }
+}
+// .euros {
+//     padding-left: 135px;
+// }
