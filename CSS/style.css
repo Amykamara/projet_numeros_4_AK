@@ -462,6 +462,7 @@ footer svg {
   border-radius: 20px;
   background-color: white;
   position: relative;
+  margin: auto;
 }
 .card-menu h3 {
   margin: 0;
@@ -483,12 +484,22 @@ footer svg {
   padding-right: 15px;
   font-weight: bold;
 }
+.card-menu aside {
+  display: flex;
+  justify-content: end;
+  position: relative;
+  margin-top: -75px;
+}
 
 .box {
   width: 59px;
-  height: 69px;
+  height: 73px;
   background-color: #99E2D0;
-  border-radius: 0px 15px 0px 15px;
+  border-radius: 0px 15px 15px 0px;
+}
+.box svg {
+  margin-left: 20px;
+  margin-top: 22px;
 }
 
 .mains {

@@ -433,11 +433,13 @@ svg {
 @include cards-menu;
 }
  .card-menu {
+  // @include cards-menu;
   width: 92%;
   height: 73px;
   border-radius: 20px;
     background-color: white;
   position: relative;
+  margin : auto;
 h3 {
   margin: 0;
     padding-left: 13px;
@@ -458,12 +460,17 @@ span {
     padding-right: 15px;
     font-weight: bold;
 }
-// .select-btn1 {
-
-// }
+aside {
+@include aside-set-up;
+}
 } 
 .box {
   @include box;
+  svg  {
+    margin-left: 20px;
+  margin-top: 22px;
+  }
+
 }
 //////
 .mains{
