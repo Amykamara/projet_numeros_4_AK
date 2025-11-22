@@ -8,6 +8,16 @@
     transform: scale(1);
   }
 }
+@keyframes box-check {
+  from {
+    opacity: 0.3;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 * {
   outline: 1px solid red;
 }
@@ -457,12 +467,16 @@ footer svg {
 }
 
 .card-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 92%;
   height: 73px;
   border-radius: 20px;
   background-color: white;
   position: relative;
   margin: auto;
+  overflow: hidden;
 }
 .card-menu h3 {
   margin: 0;
@@ -488,7 +502,12 @@ footer svg {
   display: flex;
   justify-content: end;
   position: relative;
-  margin-top: -75px;
+}
+.card-menu .card-menu-right {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-right: 10px;
 }
 
 .box {
@@ -496,10 +515,44 @@ footer svg {
   height: 73px;
   background-color: #99E2D0;
   border-radius: 0px 15px 15px 0px;
+  margin-right: -12px;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
 }
 .box svg {
   margin-left: 20px;
   margin-top: 22px;
+}
+
+.checkbox-1 {
+  display: none;
+}
+
+.card-menu-text {
+  width: 100%;
+}
+
+.checkbox-1:checked + label .box {
+  transform: translateX(0);
+  margin-right: -11px;
+}
+
+.checkbox-2 {
+  display: none;
+}
+
+.checkbox-2:checked + label .box {
+  transform: translateX(0);
+  margin-right: -11px;
+}
+
+.checkbox-3 {
+  display: none;
+}
+
+.checkbox-3:checked + label .box {
+  transform: translateX(0);
+  margin-right: -11px;
 }
 
 .mains {

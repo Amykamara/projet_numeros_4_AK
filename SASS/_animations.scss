@@ -10,8 +10,13 @@
   }
 }
 
-// @keyframes button-annime 
-// { from {
-//     transform: translateX(0%) } 
-// to { transform: translateX(100%);
-//     } }
+@keyframes box-check {
+  from {
+    opacity: 0.3;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
