@@ -18,6 +18,13 @@
     transform: scale(1);
   }
 }
+@media screen and (min-width: 1024px) {
+  .menu-Button a:hover {
+    opacity: 0.8;
+    transform: scale(1.02);
+    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.25);
+  }
+}
 * {
   outline: 1px solid red;
 }
@@ -53,6 +60,9 @@ header #first-logo {
   align-items: center;
   margin: auto;
   padding: 5%;
+}
+header .head {
+  padding-left: 15px;
 }
 header h1 {
   font-family: "Shrikhand", cursive;
@@ -392,6 +402,54 @@ footer svg {
   footer svg {
     padding-right: 10px;
   }
+  main {
+    background-color: white;
+  }
+  header h1 {
+    margin: auto;
+  }
+  .hero-img img {
+    width: 100%;
+    height: 383px;
+  }
+  .card-background {
+    display: flex;
+    flex-direction: column;
+    width: 77%;
+    justify-content: center;
+    align-items: unset;
+    margin: auto;
+    margin-top: -106px;
+  }
+  .card-background .border-aqua {
+    margin-left: 80px;
+  }
+  .starter .card-menu {
+    width: 80%;
+  }
+  .btn-section .menu-Button {
+    width: 186px;
+    padding-right: 0px;
+  }
+  .btn-section .menu-Button::hover {
+    color: #101010;
+  }
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: end;
+  }
+  footer h2 {
+    display: flex;
+    align-items: center;
+    width: 14%;
+  }
+  div {
+    flex-direction: row;
+    display: flex;
+    gap: 12px;
+    padding-right: 30px;
+  }
 }
 .head {
   display: flex;
@@ -400,6 +458,9 @@ footer svg {
   gap: 39px;
   padding-left: 25px;
   height: 63px;
+}
+.head .arrow_left {
+  margin-right: 14px;
 }
 
 .la-palette-du-gout-img {
@@ -422,7 +483,7 @@ footer svg {
   align-items: center;
   gap: 25px;
   padding-top: 16px;
-  padding-bottom: 30px;
+  padding-bottom: 0px;
 }
 .card-background .heart {
   cursor: pointer;
@@ -447,6 +508,7 @@ footer svg {
   width: 40px;
   padding-left: 0px;
   margin-left: 27px;
+  margin-top: 10px;
 }
 .border-aqua .menu-title {
   margin-top: 0px;
@@ -520,8 +582,8 @@ footer svg {
   transition: transform 0.3s ease-in-out;
 }
 .box svg {
-  margin-left: 20px;
-  margin-top: 22px;
+  margin-top: 25px;
+  margin-left: 17px;
 }
 
 .checkbox-1 {
@@ -529,6 +591,7 @@ footer svg {
 }
 
 .card-menu-text {
+  white-space: nowrap;
   width: 100%;
 }
 
@@ -551,6 +614,60 @@ footer svg {
 }
 
 .checkbox-3:checked + label .box {
+  transform: translateX(0);
+  margin-right: -11px;
+}
+
+.checkbox-4 {
+  display: none;
+}
+
+.checkbox-4:checked + label .box {
+  transform: translateX(0);
+  margin-right: -11px;
+}
+
+.checkbox-5 {
+  display: none;
+}
+
+.checkbox-5:checked + label .box {
+  transform: translateX(0);
+  margin-right: -11px;
+}
+
+.checkbox-6 {
+  display: none;
+}
+
+.checkbox-6:checked + label .box {
+  transform: translateX(0);
+  margin-right: -11px;
+}
+
+.checkbox-7 {
+  display: none;
+}
+
+.checkbox-7:checked + label .box {
+  transform: translateX(0);
+  margin-right: -11px;
+}
+
+.checkbox-8 {
+  display: none;
+}
+
+.checkbox-8:checked + label .box {
+  transform: translateX(0);
+  margin-right: -11px;
+}
+
+.checkbox-9 {
+  display: none;
+}
+
+.checkbox-9:checked + label .box {
   transform: translateX(0);
   margin-right: -11px;
 }
