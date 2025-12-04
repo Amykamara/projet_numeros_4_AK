@@ -9,10 +9,9 @@
     transform: scale(1);
   }
 }
-
-@keyframes box-check {
+@keyframes test01{
   from {
-    opacity: 0.3;
+    animation-timing-function: 0.3;
     transform: scale(0.7);
   }
   to {
@@ -20,11 +19,31 @@
     transform: scale(1);
   }
 }
+
+// @keyframes box-check {
+//   from {
+//     opacity: 0.3;
+//     transform: scale(0.7);
+//   }
+//   to {
+//     opacity: 1;
+//     transform: scale(1);
+//   }
+// }
 @media screen and (min-width: 1024px) {
+
+.menu-Button a {
+  display: inline-block; 
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
 
 .menu-Button a:hover {
   opacity: 0.8;
   transform: scale(1.02);
-  box-shadow: 0px 6px 14px rgba(0,0,0,0.25);
+  // box-shadow: 0px 6px 14px rgba(0,0,0,0.25);
 }
+
 }

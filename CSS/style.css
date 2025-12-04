@@ -8,9 +8,9 @@
     transform: scale(1);
   }
 }
-@keyframes box-check {
+@keyframes test01 {
   from {
-    opacity: 0.3;
+    animation-timing-function: 0.3;
     transform: scale(0.7);
   }
   to {
@@ -19,10 +19,13 @@
   }
 }
 @media screen and (min-width: 1024px) {
+  .menu-Button a {
+    display: inline-block;
+    transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  }
   .menu-Button a:hover {
     opacity: 0.8;
     transform: scale(1.02);
-    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.25);
   }
 }
 * {
@@ -159,16 +162,6 @@ header h1 {
   position: absolute;
   left: 10px;
 }
-.how-it-works .card-how-it-works .card-menu {
-  background-color: #F6F6F6;
-  width: 92%;
-  height: 73px;
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
 .how-it-works .card-how-it-works .card-menu svg {
   display: flex;
   justify-content: start;
@@ -294,7 +287,7 @@ footer {
 }
 footer h2 {
   color: white;
-  font-family: "Shrikhand", cursive;
+  font-family: "Shrikhand", revert-layer;
   font-size: 18px;
   width: 85%;
   margin-top: 0px;
@@ -411,6 +404,7 @@ footer svg {
   .hero-img img {
     width: 100%;
     height: 383px;
+    object-fit: cover;
   }
   .card-background {
     display: flex;
@@ -419,20 +413,58 @@ footer svg {
     justify-content: center;
     align-items: unset;
     margin: auto;
-    margin-top: -106px;
+    margin-top: -24px;
   }
   .card-background .border-aqua {
     margin-left: 80px;
   }
-  .starter .card-menu {
-    width: 80%;
+  .starter .menu-card {
+    width: 634px;
+  }
+  .card-content {
+    display: flex;
+    height: 70px;
+    width: 100%;
+  }
+  .card-content .card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 551px;
+    gap: 3px;
+    flex: 1;
+    padding: 12px;
+  }
+  .toggle-check:checked + .card-content .card-selected {
+    width: 0px;
+  }
+  .menu-card:hover .card-selected {
+    width: 70px;
+  }
+  .menu-card:hover .card-price {
+    transform: translateX(-15px);
+  }
+  .btn-section {
+    display: flex;
+    justify-content: center;
   }
   .btn-section .menu-Button {
     width: 186px;
-    padding-right: 0px;
+    background-color: white;
+    transition: all 0.3s ease;
   }
-  .btn-section .menu-Button::hover {
-    color: #101010;
+  .btn-section .menu-Button:hover {
+    background-color: white;
+    opacity: 0.7;
+    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.1);
+  }
+  .btn-section a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
   }
   footer {
     display: flex;
@@ -443,12 +475,18 @@ footer svg {
     display: flex;
     align-items: center;
     width: 14%;
+    justify-content: center;
+    padding-left: 15px;
   }
   div {
     flex-direction: row;
     display: flex;
     gap: 12px;
     padding-right: 30px;
+    padding-right: 0px;
+  }
+  div p {
+    padding-right: 20px;
   }
 }
 .head {
@@ -476,6 +514,7 @@ footer svg {
 .card-background h1 {
   font-family: "Shrikhand", cursive;
   font-size: 28px;
+  margin-left: -30px;
 }
 .card-background .big-title {
   display: flex;
@@ -507,7 +546,7 @@ footer svg {
   border-bottom: solid 2.5px #99E2D0;
   width: 40px;
   padding-left: 0px;
-  margin-left: 27px;
+  margin-left: 13px;
   margin-top: 10px;
 }
 .border-aqua .menu-title {
@@ -526,150 +565,78 @@ footer svg {
   gap: 20px;
   align-items: center;
   padding-top: 25px;
+  margin-left: -5px;
 }
 
-.card-menu {
+.menu-card {
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 345px;
+  margin-bottom: 0px;
+}
+
+.toggle-check {
+  display: none;
+}
+
+.card-content {
+  display: flex;
+  cursor: pointer;
+  height: 70px;
+}
+
+.card-info {
+  flex: 1;
+  padding: 12px;
+}
+
+h3 {
+  margin: 0 0 5px 0;
+  font-size: 18px;
+}
+
+.card-details {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 92%;
-  height: 73px;
-  border-radius: 20px;
-  background-color: white;
-  position: relative;
-  margin: auto;
-  overflow: hidden;
 }
-.card-menu h3 {
+
+.card-description {
   margin: 0;
-  padding-left: 13px;
-  padding-top: 10px;
-  font-size: 18px;
-  font-family: "Roboto", sans-serif;
-}
-.card-menu p {
-  padding-left: 13px;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-  font-family: "Roboto", sans-serif;
-  font-size: 15.04px;
+  text-overflow: ellipsis;
+  font-size: 16px;
   font-weight: lighter;
 }
-.card-menu span {
-  padding-right: 15px;
+
+.card-price {
   font-weight: bold;
+  padding-left: 15px;
+  flex-shrink: 0;
 }
-.card-menu aside {
-  display: flex;
-  justify-content: end;
-  position: relative;
-}
-.card-menu .card-menu-right {
+
+.card-selected {
+  background-color: #99E2D0;
+  width: 0;
+  overflow: hidden;
   display: flex;
   align-items: center;
-  height: 100%;
-  padding-right: 10px;
+  justify-content: center;
+  transition: width 0.5s ease-in-out;
 }
 
-.box {
+.toggle-check:checked + .card-content .card-selected {
   width: 59px;
-  height: 73px;
-  background-color: #99E2D0;
-  border-radius: 0px 15px 15px 0px;
-  margin-right: -12px;
-  transform: translateX(100%);
-  transition: transform 0.3s ease-in-out;
-}
-.box svg {
-  margin-top: 25px;
-  margin-left: 17px;
 }
 
-.checkbox-1 {
-  display: none;
+.toggle-check:checked + .card-content .box-check {
+  transform: rotate(360deg);
 }
 
 .card-menu-text {
   white-space: nowrap;
   width: 100%;
-}
-
-.checkbox-1:checked + label .box {
-  transform: translateX(0);
-  margin-right: -11px;
-}
-
-.checkbox-2 {
-  display: none;
-}
-
-.checkbox-2:checked + label .box {
-  transform: translateX(0);
-  margin-right: -11px;
-}
-
-.checkbox-3 {
-  display: none;
-}
-
-.checkbox-3:checked + label .box {
-  transform: translateX(0);
-  margin-right: -11px;
-}
-
-.checkbox-4 {
-  display: none;
-}
-
-.checkbox-4:checked + label .box {
-  transform: translateX(0);
-  margin-right: -11px;
-}
-
-.checkbox-5 {
-  display: none;
-}
-
-.checkbox-5:checked + label .box {
-  transform: translateX(0);
-  margin-right: -11px;
-}
-
-.checkbox-6 {
-  display: none;
-}
-
-.checkbox-6:checked + label .box {
-  transform: translateX(0);
-  margin-right: -11px;
-}
-
-.checkbox-7 {
-  display: none;
-}
-
-.checkbox-7:checked + label .box {
-  transform: translateX(0);
-  margin-right: -11px;
-}
-
-.checkbox-8 {
-  display: none;
-}
-
-.checkbox-8:checked + label .box {
-  transform: translateX(0);
-  margin-right: -11px;
-}
-
-.checkbox-9 {
-  display: none;
-}
-
-.checkbox-9:checked + label .box {
-  transform: translateX(0);
-  margin-right: -11px;
 }
 
 .mains {
@@ -679,6 +646,7 @@ footer svg {
   gap: 20px;
   align-items: center;
   padding-top: 25px;
+  margin-left: -5px;
 }
 
 .desserts {
@@ -688,6 +656,7 @@ footer svg {
   gap: 20px;
   align-items: center;
   padding-top: 25px;
+  margin-left: -5px;
 }
 
 .btn-section {

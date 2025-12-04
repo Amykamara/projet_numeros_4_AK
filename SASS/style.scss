@@ -122,12 +122,12 @@ a {
   }
 }
   .card-menu {
-background-color: $background-color;
-  width: 92%;
-  height: 73px;
-  border-radius: 20px;
-  @include set-up ;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+// background-color: $background-color;
+//   width: 92%;
+//   height: 73px;
+//   border-radius: 20px;
+//   @include set-up ;
+//   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   
 svg {
   display: flex;
@@ -259,7 +259,7 @@ footer {
   font-family: roboto;
 h2 {
   color: $font-color;
-  font-family: $font-title;
+  font-family: $font-title2;
   font-size:18px ;
   width: 85%;
   margin-top: 0px;  
@@ -378,10 +378,11 @@ h1 {
 }
 }
 .hero-img{
-  img {
-    width: 100%;
-    height: 383px;
-  }
+img {
+  width: 100%;
+  height: 383px;
+  object-fit: cover;
+}
 }
 .card-background {
   display: flex;
@@ -390,7 +391,7 @@ h1 {
   justify-content: center;
   align-items: unset;
   margin: auto;
-    margin-top: -106px;
+  margin-top: -24px;
 
 .border-aqua {
   margin-left: 80px;
@@ -398,17 +399,57 @@ h1 {
 
 }
 .starter{ 
-.card-menu {
-  width: 80%;
+.menu-card {
+  width: 634px;
 }
 }
-.btn-section{ 
+.card-content {
+    display: flex;
+  height: 70px;
+    width: 100%;
+.card-info {
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 551px;
+  gap: 3px;
+  flex: 1;
+  padding: 12px;
+}
+}
+.toggle-check:checked + .card-content .card-selected {
+  width: 0px;
+}
+
+.menu-card:hover .card-selected {
+  width: 70px;                         
+}
+
+.menu-card:hover .card-price {
+  transform: translateX(-15px);        
+}
+.btn-section { 
+   display: flex;
+  justify-content: center;
 .menu-Button {
-  width: 186px;
-    padding-right: 0px;
+ width: 186px;
+    background-color: white;   
+    // opacity: 1;
+    // border-radius: 30px;
+    transition: all 0.3s ease;   
 }
-.menu-Button::hover {
-  color: #101010;
+.menu-Button:hover {
+  background-color: white;
+  opacity: 0.7;              
+  box-shadow: 0px 6px 14px rgba(0,0,0,0.10);
+}
+a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
 }
 }
 footer {
@@ -420,13 +461,18 @@ h2 {
   display: flex;
   align-items: center;
   width: 14%;
+      justify-content: center;
+    padding-left: 15px;
 }}
 div {
   flex-direction: row;
   display: flex;
   gap: 12px;
   padding-right: 30px;
-}
+    padding-right: 0px;
+p{
+    padding-right: 20px;
+}}
 }
 
 
@@ -441,28 +487,21 @@ div {
 .arrow_left{ 
   margin-right: 14px;
 }
-
-
 } 
 
-
-// header{
-//   .page-1 {
-//       padding-left: 23px;
-//   }
-// }
 
 .la-palette-du-gout-img { 
   width: 100%;}
 .card-background {
   border-radius: 35px 35px 0px 0px;
-    margin-top: -55px;
-    background-color: $background-color;
-      position: relative;
+  margin-top: -55px;
+  background-color: $background-color;
+  position: relative;
   h1 {
   font-family: $font-title;
   font-size: 28px;
-  }
+  margin-left: -30px;
+}
 .big-title {
   @include set-up;
   gap: 25px;
@@ -491,7 +530,7 @@ div {
   border-bottom: solid 2.5px $tertiary-color;
   width: 40px;
   padding-left: 0px;
-    margin-left: 27px;
+  margin-left: 13px;
   margin-top: 10px;
 .menu-title {
   margin-top: 0px;
@@ -505,60 +544,68 @@ div {
 .starter {
 @include cards-menu;
 }
- .card-menu {
+.menu-card {
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden; 
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  width: 345px;
+  margin-bottom: 0px;
+}
+.toggle-check {
+  display: none;
+}
+
+.card-content {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-    width: 92%;
-  height: 73px;
-  border-radius: 20px;
-    background-color: white;
-  position: relative;
-  margin : auto;
-    overflow: hidden;     // pour que le carré caché ne dépasse pas
+  cursor: pointer; 
+  height: 70px; 
+}
+
+.card-info {
+  flex: 1;
+  padding: 12px;
+}
 
 h3 {
-  margin: 0;
-    padding-left: 13px;
-      padding-top: 10px;
-      font-size: 18px;
-      font-family: $font-text;
+  margin: 0 0 5px 0;
+  font-size: 18px;
 }
-p {
-    padding-left: 13px;
-    display: flex;
+
+.card-details {
+  display: flex;
   justify-content: space-between;
-    margin-top: 10px;
-    font-family: $font-text;
-    font-size: 15.04px;
+  align-items: center;
+}
+
+.card-description {
+  margin: 0;
+  text-overflow: ellipsis;
+  font-size: 16px;
   font-weight: lighter;
 }
-span {
-    padding-right: 15px;
-    font-weight: bold;
+
+.card-price {
+  font-weight: bold;
+  padding-left: 15px; 
+  flex-shrink: 0; 
 }
-aside {
-@include aside-set-up;
-}
-.card-menu-right {
+.card-selected {
+  background-color: $tertiary-color;
+  width: 0;
+  overflow: hidden;
   display: flex;
   align-items: center;
-  height: 100%;
-  padding-right: 10px;
+  justify-content: center;
+  transition: width 0.5s ease-in-out;
 }
-} 
-.box {
-  @include box;
-  margin-right: -12px;
-  transform: translateX(100%);
-  transition: transform 0.3s ease-in-out;
-  svg  {
-  margin-top: 25px;
-  margin-left: 17px;
-  }
+
+.toggle-check:checked + .card-content .card-selected {
+  width: 59px;
 }
-.checkbox-1{
-  display: none;
+
+.toggle-check:checked + .card-content .box-check {
+  transform: rotate(360deg);
 }
 
   .card-menu-text {
@@ -566,88 +613,87 @@ aside {
   width: 100%;
   }
 
-.checkbox-1:checked + label .box {
-  transform: translateX(0);
-    margin-right: -11px;
-}
+// .checkbox-1:checked + label .box {
+//   transform: translateX(0);
+//     margin-right: -11px;
+// }
 
-.checkbox-2{
-  display: none;
-}
-
-
-.checkbox-2:checked + label .box {
-  transform: translateX(0);
-    margin-right: -11px;
-}
-.checkbox-3{
-  display: none;
-}
+// .checkbox-2{
+//   display: none;
+// }
 
 
-.checkbox-3:checked + label .box {
-  transform: translateX(0);
-    margin-right: -11px;
-}
-
-// PLat 
-.checkbox-4{
-  display: none;
-}
+// .checkbox-2:checked + label .box {
+//   transform: translateX(0);
+//     margin-right: -11px;
+// }
+// .checkbox-3{
+//   display: none;
+// }
 
 
-.checkbox-4:checked + label .box {
-  transform: translateX(0);
-    margin-right: -11px;
-}
+// .checkbox-3:checked + label .box {
+//   transform: translateX(0);
+//     margin-right: -11px;
+// }
 
-.checkbox-5{
-  display: none;
-}
-
-
-.checkbox-5:checked + label .box {
-  transform: translateX(0);
-    margin-right: -11px;
-}
-.checkbox-6{
-  display: none;
-}
+// .checkbox-4{
+//   display: none;
+// }
 
 
-.checkbox-6:checked + label .box {
-  transform: translateX(0);
-    margin-right: -11px;
-}
-//desert
-.checkbox-7{
-  display: none;
-}
+// .checkbox-4:checked + label .box {
+//   transform: translateX(0);
+//     margin-right: -11px;
+// }
+
+// .checkbox-5{
+//   display: none;
+// }
 
 
-.checkbox-7:checked + label .box {
-  transform: translateX(0);
-    margin-right: -11px;
-}
-
-.checkbox-8{
-  display: none;
-}
-
-
-.checkbox-8:checked + label .box {
-  transform: translateX(0);
-    margin-right: -11px;
-}
-.checkbox-9{
-  display: none;
-}
+// .checkbox-5:checked + label .box {
+//   transform: translateX(0);
+//     margin-right: -11px;
+// }
+// .checkbox-6{
+//   display: none;
+// }
 
 
-.checkbox-9:checked + label .box {
-  transform: translateX(0);
-    margin-right: -11px;
-}
+// .checkbox-6:checked + label .box {
+//   transform: translateX(0);
+//     margin-right: -11px;
+// }
+// //desert
+// .checkbox-7{
+//   display: none;
+// }
+
+
+// .checkbox-7:checked + label .box {
+//   transform: translateX(0);
+//     margin-right: -11px;
+// }
+
+// .checkbox-8{
+//   display: none;
+// }
+
+
+// .checkbox-8:checked + label .box {
+//   transform: translateX(0);
+//     margin-right: -11px;
+// }
+// .checkbox-9{
+//   display: none;
+// }
+
+
+// .checkbox-9:checked + label .box {
+//   transform: translateX(0);
+//     margin-right: -11px;
+// }
 
 .mains{
 @include cards-menu;
