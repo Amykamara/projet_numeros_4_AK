@@ -11,7 +11,7 @@
 @keyframes test01 {
   from {
     animation-timing-function: 0.3;
-    transform: scale(0.7);
+    transform: scalex(0.7);
   }
   to {
     opacity: 1;
@@ -157,29 +157,6 @@ header h1 {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 .how-it-works .card-how-it-works .card-choose svg {
-  display: flex;
-  justify-content: start;
-  position: absolute;
-  left: 10px;
-}
-.how-it-works .card-how-it-works .card-menu svg {
-  display: flex;
-  justify-content: start;
-  position: absolute;
-  left: 10px;
-}
-.how-it-works .card-how-it-works .card-enjoy {
-  background-color: #F6F6F6;
-  width: 92%;
-  font-size: 16px;
-  height: 73px;
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-.how-it-works .card-how-it-works .card-enjoy svg {
   display: flex;
   justify-content: start;
   position: absolute;
@@ -333,22 +310,6 @@ footer svg {
     width: 43%;
   }
   .how-it-works .card-how-it-works .card-choose svg {
-    position: static !important;
-    margin-right: 8px;
-    margin-left: 0px;
-  }
-  .how-it-works .card-how-it-works .card-menu {
-    width: 43%;
-  }
-  .how-it-works .card-how-it-works .card-menu svg {
-    position: static !important;
-    margin-right: 8px;
-    margin-left: 0px;
-  }
-  .how-it-works .card-how-it-works .card-enjoy {
-    width: 43%;
-  }
-  .how-it-works .card-how-it-works .card-enjoy svg {
     position: static !important;
     margin-right: 8px;
     margin-left: 0px;
@@ -590,6 +551,7 @@ footer svg {
 .card-info {
   flex: 1;
   padding: 12px;
+  min-width: 0;
 }
 
 h3 {
@@ -606,7 +568,7 @@ h3 {
 .card-description {
   margin: 0;
   text-overflow: ellipsis;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: lighter;
 }
 
@@ -624,6 +586,18 @@ h3 {
   align-items: center;
   justify-content: center;
   transition: width 0.5s ease-in-out;
+}
+
+.toggle-check:checked + .card-content .card-description {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.toggle-check:checked + .card-content .card-info h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .toggle-check:checked + .card-content .card-selected {
@@ -668,7 +642,7 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60%;
+  width: 53%;
   height: 50px;
   border-radius: 25px;
   background: linear-gradient(357deg, #9356DC 0%, #FF79DA 100%);

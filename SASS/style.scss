@@ -121,38 +121,6 @@ a {
     left: 10px;
   }
 }
-  .card-menu {
-// background-color: $background-color;
-//   width: 92%;
-//   height: 73px;
-//   border-radius: 20px;
-//   @include set-up ;
-//   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  
-svg {
-  display: flex;
-  justify-content: start;
-  position: absolute;
-  left: 10px;
-  }       
-
-}
- .card-enjoy{
-background-color: $background-color;
-  width: 92%;
-  font-size: 16px;
-  height: 73px;
-  border-radius: 20px;
-  @include set-up ;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-
-  svg {
-    display: flex;
-    justify-content: start;
-    position: absolute;
-    left: 10px;
-  }
-  }
 }
 }
 
@@ -187,16 +155,15 @@ a {
 }
 .card-content {
   background-color: white;
-border-radius: 0 0 15px 15px;
-  // margin-top: -22px;
-    padding-top: 15px;
+  border-radius: 0 0 15px 15px;
+  padding-top: 15px;
   margin-top: -4px;
 }
 .card-title{
-display: flex;
-align-items: center;
-justify-content: space-between;
-width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
   margin-bottom: 0px;
   height: 20px;
   margin: auto;
@@ -304,22 +271,6 @@ h2 {
   margin-left: 0px;
 }
   }
-.card-menu {
-    width: 43%;
-  svg {
-  position: static !important;
-  margin-right: 8px;
-  margin-left: 0px;
-}
-}
-.card-enjoy{
-  width: 43%;
-svg {
-  position: static !important;
-  margin-right: 8px;
-  margin-left: 0px;
-}
-}
 }
 }
 .restaurants {
@@ -406,9 +357,9 @@ img {
 .card-content {
     display: flex;
   height: 70px;
-    width: 100%;
+  width: 100%;
 .card-info {
-    display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   width: 551px;
@@ -434,8 +385,6 @@ img {
 .menu-Button {
  width: 186px;
     background-color: white;   
-    // opacity: 1;
-    // border-radius: 30px;
     transition: all 0.3s ease;   
 }
 .menu-Button:hover {
@@ -474,9 +423,6 @@ p{
     padding-right: 20px;
 }}
 }
-
-
-
 .head{
   display: flex;
   justify-content: flex-start;
@@ -565,7 +511,12 @@ p{
 .card-info {
   flex: 1;
   padding: 12px;
+  min-width:0;
 }
+
+
+
+
 
 h3 {
   margin: 0 0 5px 0;
@@ -581,7 +532,7 @@ h3 {
 .card-description {
   margin: 0;
   text-overflow: ellipsis;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: lighter;
 }
 
@@ -600,6 +551,18 @@ h3 {
   transition: width 0.5s ease-in-out;
 }
 
+.toggle-check:checked + .card-content .card-description {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.toggle-check:checked + .card-content .card-info h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .toggle-check:checked + .card-content .card-selected {
   width: 59px;
 }
@@ -612,89 +575,6 @@ h3 {
   white-space: nowrap;
   width: 100%;
   }
-
-// .checkbox-1:checked + label .box {
-//   transform: translateX(0);
-//     margin-right: -11px;
-// }
-
-// .checkbox-2{
-//   display: none;
-// }
-
-
-// .checkbox-2:checked + label .box {
-//   transform: translateX(0);
-//     margin-right: -11px;
-// }
-// .checkbox-3{
-//   display: none;
-// }
-
-
-// .checkbox-3:checked + label .box {
-//   transform: translateX(0);
-//     margin-right: -11px;
-// }
-
-// .checkbox-4{
-//   display: none;
-// }
-
-
-// .checkbox-4:checked + label .box {
-//   transform: translateX(0);
-//     margin-right: -11px;
-// }
-
-// .checkbox-5{
-//   display: none;
-// }
-
-
-// .checkbox-5:checked + label .box {
-//   transform: translateX(0);
-//     margin-right: -11px;
-// }
-// .checkbox-6{
-//   display: none;
-// }
-
-
-// .checkbox-6:checked + label .box {
-//   transform: translateX(0);
-//     margin-right: -11px;
-// }
-// //desert
-// .checkbox-7{
-//   display: none;
-// }
-
-
-// .checkbox-7:checked + label .box {
-//   transform: translateX(0);
-//     margin-right: -11px;
-// }
-
-// .checkbox-8{
-//   display: none;
-// }
-
-
-// .checkbox-8:checked + label .box {
-//   transform: translateX(0);
-//     margin-right: -11px;
-// }
-// .checkbox-9{
-//   display: none;
-// }
-
-
-// .checkbox-9:checked + label .box {
-//   transform: translateX(0);
-//     margin-right: -11px;
-// }
-
 .mains{
 @include cards-menu;
 }
@@ -709,7 +589,7 @@ padding-top: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60%;
+  width: 53%;
   height: 50px;
   border-radius: 25px;
   background: linear-gradient(357deg, #9356DC 0%, #FF79DA 100%);
@@ -721,15 +601,3 @@ padding-top: 40px;
   border: none;
   }
 }
-
-
-// .checkbox-1  {
-//   fill: none; 
-//   stroke: #101010;
-//   stroke-width: 1;
-//   transition: all 0.3s ease-in-out;
-// }
-//   .box-check {
-//   cursor: pointer;
-//   transition: transform 0.3s ease-in-out;
-// }
