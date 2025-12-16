@@ -7,20 +7,19 @@
 * {
   outline: 1px solid red; }
 main {
-    // width: 100%;
-    margin: 0;
-background-color: $background-color;
+  margin: 0;
+  background-color: $background-color;
 }
 body {
-    width: 100%;
-    margin: 0;
-    font-family: $font-text;
+  width: 100%;
+  margin: 0;
+  font-family: $font-text;
 }
-    #first-logo {
-    display: flex;
-    align-items: center;
-    width: 55%;
-    margin: 0;
+  #first-logo {
+  display: flex;
+  align-items: center;
+  width: 55%;
+  margin: 0;
 }
 header {
   width: 100%;
@@ -36,18 +35,15 @@ header {
   padding-top: 8px;
 }
 .head {
-    padding-left: 15px;
-      // gap: 60px;
+  padding-left: 15px;
 }
 
   h1 {
   font-family: $font-title;
   @include set-up;
-      margin: auto;
-  }
+  margin: auto;
 }
-
-
+}
 .location { 
   @include set-up;
   margin:auto;
@@ -56,15 +52,24 @@ header {
     font-weight: normal;
     font-size: 12px;
   box-shadow: 0 6px 15px rgba(0, 0,1, 0.12);
-    // margin-top: -6%;
-  
-  h2{
-    width: 100%;
+h2{
+  width: 100%;
 @include set-up;
-    gap: 20px;
-  }
+  gap: 20px;
 }
- .hero {
+}
+.hero-img{
+  .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}}
+.hero {
 h2 {
   width: 83%;
   @include set-up;
@@ -81,36 +86,33 @@ h2 {
   width: 84%;
 @include set-up;
   text-align: center;
-    font-weight: lighter;
+  font-weight: lighter;
 }}
-button {
+.button {
   width: 218px;
   height:50px;
   border-radius: 25px;
-background: $gradient-primary;
-color: white;
-font-size: 16px;
-border: none;
-a {
+  background: $gradient-primary;
+  color: white;
+  font-size: 16px;
+  border: none;
+  @include set-up;
   text-decoration: none;
-  color: $font-color;
-    font-size: 15px;
-}
 }}
 .how-it-works {
   background-color: white;
-    height: 440px;
+  height: 440px;
   padding-left: 23px;
-    padding-top: 10px;
-  .card-how-it-works {
+  padding-top: 10px;
+.card-how-it-works {
   height: 330px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;  
-  .card-icone {
+.card-icone {
   margin: 40px;
-  }
-  .card-choose {
+}
+.card-choose {
   background-color: $background-color;
   width: 92%;
   height: 73px;
@@ -118,12 +120,12 @@ a {
   @include set-up ;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   position: relative;
-  svg {
-    display: flex;
-    justify-content: start;
-    position: absolute;
-    left: -11px;
-  }
+svg {
+  display: flex;
+  justify-content: start;
+  position: absolute;
+  left: -11px;
+}
 } 
 .card-menu {
   background-color: $background-color;
@@ -133,12 +135,12 @@ a {
   @include set-up ;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   svg {
-    display: flex;
-    justify-content: start;
-    position: absolute;
-    left: 10px;
-  }
-  }
+  display: flex;
+  justify-content: start;
+  position: absolute;
+  left: 10px;
+}
+}
   .card-enjoy {
   background-color: $background-color;
   width: 92%;
@@ -146,48 +148,46 @@ a {
   border-radius: 20px;
   @include set-up ;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  svg {
-    display: flex;
-    justify-content: start;
-    position: absolute;
-    left: 10px;
-  }
-  }
+svg {
+  display: flex;
+  justify-content: start;
+  position: absolute;
+  left: 10px;
 }
 }
-
+}
+}
 .restaurants {
   background-color: $background-color;
-margin: 6%;
+  margin: 6%;
   padding-bottom: 50px;
   display: flex;
   flex-direction: column;
   gap: 24px;
-    margin-bottom: 0px;
+  margin-bottom: 0px;
   justify-content: center;
   align-items: center;
-    width: auto;
-  h2 {
-    width: 80%;
-  }
-.card {
-    width: 100%;
-      // margin-top: -37px;
+  width: auto;
+h2 {
+  width: 80%;
 }
-  img {
-    width: 100%;
-    height: 180px; 
+.card {
+  width: 100%;
+}
+img {
+  width: 100%;
+  height: 180px; 
   object-fit: cover;
-    object-position: center 62%;
-    border-radius: 15px 15px 0 0 ;
-    overflow: hidden;
+  object-position: center 62%;
+  border-radius: 15px 15px 0 0 ;
+  overflow: hidden;
 }
 a {
   text-decoration: none;
   color: black;
 }
 .new-svg {
- position: relative;
+  position: relative;
   top: 50px;
   right: 0px;
   height: 37px;
@@ -237,20 +237,20 @@ a {
   transition: all 0.3s ease-in-out;
 }
 .like-1:checked + label .heart-path {
-  fill: url(#heartGradient); 
+  fill: url(#heartGradient-1); 
   stroke: none;
 }
 .like-2:checked + label .heart-path {
-  fill: url(#heartGradient); 
+  fill: url(#heartGradient-2); 
   stroke: none;
 
 }
 .like-3:checked + label .heart-path {
-  fill: url(#heartGradient); 
+  fill: url(#heartGradient-3); 
   stroke: none;
 }
 .like-4:checked + label .heart-path {
-  fill: url(#heartGradient); 
+  fill: url(#heartGradient-4); 
   stroke: none;
 }
 .card-txt {
@@ -285,8 +285,7 @@ h2 {
 
 }.footer-txt {
   color: #FFFFFF;
-  // padding-bottom: 16px;
-    margin-bottom: 0px;
+  margin-bottom: 0px;
 }
 #contact{
   margin-bottom: 0px;
@@ -296,14 +295,12 @@ svg {
   padding-right: 10px;
 }}
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  /* Styles tablette ici */
 
 header {
-
 h1{
   padding-top: 15px;
   margin-top: 0px;
-    margin: auto;
+  margin: auto;
 }
 }
 .hero {
@@ -317,6 +314,18 @@ br {
 br {
   display: none;
 }}}}
+.hero-img{
+  .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}}
+
 .card-background{ 
 .border-aqua {
   margin-left: 181px;
@@ -340,10 +349,9 @@ h2{
 .hero button {       
   width: 225px;
 }
-
 .restaurants {
 h2 {
-    width: 100%;
+  width: 100%;
 }
 .card-txt { 
   padding-left: 26px;
@@ -362,7 +370,7 @@ h3 {
 }}
 .btn-section{
 .menu-Button {
-    width: 186px;
+  width: 186px;
 } }
 }
 @media screen and (min-width: 1024px) {
@@ -387,7 +395,6 @@ br {
   display: none;
 }}}}
 
-// Fonctionnement section// 
 .how-it-works {
   padding-left: 0;
 h2 {
@@ -403,18 +410,7 @@ h2 {
   align-items: center;
   gap: 30px;
   margin: auto;
-.card-choose {
-  // width: 43%;
-  svg {
-  // position: static !important;
-  // margin-right: 8px;
-  // margin-left: 0px;
-  //   margin-left: -30px;
-}
-  }
-
-
-  .card-icone {
+.card-icone {
   margin: 40px;
   }
   .card-choose {
@@ -526,7 +522,6 @@ svg {
   padding-right: 10px;
 }
 }
-// La palette du goût
 main {
   background-color: white;
 }
@@ -537,6 +532,16 @@ h1 {
 }
 }
 .hero-img{
+  .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 img {
   width: 100%;
   height: 383px;
@@ -553,8 +558,8 @@ img {
   margin-top: -24px;
 
 .border-aqua {
-    margin-left: 116px;
-  }
+  margin-left: 116px;
+}
 
 }
 .starter{ 
@@ -563,7 +568,7 @@ img {
 }
 }
 .card-content {
-    display: flex;
+  display: flex;
   height: 70px;
   width: 100%;
 .card-info {
@@ -591,9 +596,9 @@ img {
    display: flex;
   justify-content: center;
 .menu-Button {
-    width: 186px;
-    background-color: white;   
-    transition: all 0.3s ease;   
+  width: 186px;
+  background-color: white;   
+  transition: all 0.3s ease;   
 }
 .menu-Button:hover {
   background-color: white;
@@ -615,7 +620,6 @@ footer {
   justify-content: end;
   margin-bottom: 0;
   padding-bottom: 15px;
-
 h2 {
   display: flex;
   align-items: center;
@@ -627,25 +631,21 @@ div {
   flex-direction: row;
   display: flex;
   padding-right: 30px;
-    padding-right: 0px;
+  padding-right: 0px;
 p{
-    padding-right: 20px;
+  padding-right: 20px;
 }}
 }
-
 .head{
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  // gap: 60px;
   padding-left: 25px;
-    height: 63px;
+  height: 63px;
 .arrow_left{ 
   margin-right: 14px;
 }
 } 
-
-
 .la-palette-du-gout-img { 
   object-fit: cover;
   object-position: center;
@@ -657,9 +657,8 @@ p{
   object-position: center;
   height: 275px;
   width: 100%;
-  }
-
-  .Le-délice-des-sens-img { 
+}
+.Le-délice-des-sens-img { 
   object-fit: cover;
   object-position: center;
   height: 275px;
@@ -670,13 +669,13 @@ p{
   object-position: center;
   height: 275px;
   width: 100%;
-  }
+}
 .card-background {
   border-radius: 35px 35px 0px 0px;
   margin-top: -58px;
   background-color: $background-color;
   position: relative;
-  h1 {
+h1 {
   font-family: $font-title;
   font-size: 28px;
   margin-left: -30px;
@@ -690,7 +689,6 @@ p{
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
 }
-
 .heart-path {
   fill: none; 
   stroke: #101010;
@@ -734,42 +732,31 @@ p{
 .toggle-check {
   display: none;
 }
-
 .card-content {
   display: flex;
   cursor: pointer; 
   height: 70px; 
 }
-
 .card-info {
   flex: 1;
   padding: 12px;
   min-width:0;
 }
-
-
-
-
-
-
 h3 {
   margin: 0 0 5px 0;
   font-size: 18px;
 }
-
 .card-details {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 .card-description {
   margin: 0;
   text-overflow: ellipsis;
   font-size: 15px;
   font-weight: lighter;
 }
-
 .card-price {
   font-weight: bold;
   padding-left: 15px; 
@@ -784,13 +771,11 @@ h3 {
   justify-content: center;
   transition: width 0.5s ease-in-out;
 }
-
 .toggle-check:checked + .card-content .card-description {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
 .toggle-check:checked + .card-content .card-info h3 {
   white-space: nowrap;
   overflow: hidden;
@@ -827,11 +812,11 @@ padding-top: 40px;
   height: 50px;
   border-radius: 25px;
   background: linear-gradient(357deg, #9356DC 0%, #FF79DA 100%);
-    margin: auto;
-  a {
-    text-decoration: none;
-    color: white;
+  margin: auto;
+a {
+  text-decoration: none;
+  color: white;
   font-size: 16px;
   border: none;
-  }
+}
 }

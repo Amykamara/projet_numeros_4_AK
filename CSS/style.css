@@ -97,6 +97,17 @@ header h1 {
   gap: 20px;
 }
 
+.hero-img .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .hero h2 {
   width: 83%;
   display: flex;
@@ -122,7 +133,7 @@ header h1 {
   text-align: center;
   font-weight: lighter;
 }
-.hero button {
+.hero .button {
   width: 218px;
   height: 50px;
   border-radius: 25px;
@@ -130,11 +141,10 @@ header h1 {
   color: white;
   font-size: 16px;
   border: none;
-}
-.hero button a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
-  color: white;
-  font-size: 15px;
 }
 
 .how-it-works {
@@ -281,19 +291,19 @@ header h1 {
   transition: all 0.3s ease-in-out;
 }
 .restaurants .like-1:checked + label .heart-path {
-  fill: url(#heartGradient);
+  fill: url(#heartGradient-1);
   stroke: none;
 }
 .restaurants .like-2:checked + label .heart-path {
-  fill: url(#heartGradient);
+  fill: url(#heartGradient-2);
   stroke: none;
 }
 .restaurants .like-3:checked + label .heart-path {
-  fill: url(#heartGradient);
+  fill: url(#heartGradient-3);
   stroke: none;
 }
 .restaurants .like-4:checked + label .heart-path {
-  fill: url(#heartGradient);
+  fill: url(#heartGradient-4);
   stroke: none;
 }
 .restaurants .card-txt {
@@ -340,7 +350,6 @@ footer svg {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  /* Styles tablette ici */
   header h1 {
     padding-top: 15px;
     margin-top: 0px;
@@ -351,6 +360,16 @@ footer svg {
   }
   .hero .div-intro .text-intro br {
     display: none;
+  }
+  .hero-img .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
   }
   .card-background .border-aqua {
     margin-left: 181px;
@@ -543,6 +562,16 @@ footer svg {
   }
   header h1 {
     margin: auto;
+  }
+  .hero-img .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
   }
   .hero-img img {
     width: 100%;
