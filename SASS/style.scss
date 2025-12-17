@@ -4,8 +4,8 @@
 
 
 // mobile first/
-* {
-  outline: 1px solid red; }
+// * {
+//   outline: 1px solid red; }
 main {
   margin: 0;
   background-color: $background-color;
@@ -66,7 +66,7 @@ h2{
   margin: -1px;
   padding: 0;
   border: 0;
-  clip: rect(0 0 0 0);
+clip-path: inset(50%);
   overflow: hidden;
 }}
 .hero {
@@ -211,6 +211,8 @@ a {
   margin-bottom: 0px;
   height: 20px;
   margin: auto;
+  // font-size: 18px;
+  // font-weight: bold;
 }
 .like-1 {
   display: none;
@@ -322,7 +324,7 @@ br {
   margin: -1px;
   padding: 0;
   border: 0;
-  clip: rect(0 0 0 0);
+clip-path: inset(50%);
   overflow: hidden;
 }}
 
@@ -539,7 +541,7 @@ h1 {
   margin: -1px;
   padding: 0;
   border: 0;
-  clip: rect(0 0 0 0);
+clip-path: inset(50%);
   overflow: hidden;
 }
 img {
@@ -579,6 +581,10 @@ img {
   gap: 3px;
   flex: 1;
   padding: 12px;
+span {
+    font-size: 18px;
+  font-weight: bold;
+}
 }
 }
 .toggle-check:checked + .card-content .card-selected {
@@ -742,6 +748,10 @@ h1 {
   padding: 12px;
   min-width:0;
 }
+span {
+    font-size: 18px;
+  font-weight: bold;
+}
 h3 {
   margin: 0 0 5px 0;
   font-size: 18px;
@@ -754,8 +764,9 @@ h3 {
 .card-description {
   margin: 0;
   text-overflow: ellipsis;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: lighter;
+  
 }
 .card-price {
   font-weight: bold;
