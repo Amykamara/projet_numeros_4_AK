@@ -1,0 +1,35 @@
+@mixin set-up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin set-up-column {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+@mixin set-up-row {
+    display: flex;
+    flex-direction: row;
+    
+}
+@mixin cards-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    padding-top: 25px;
+      margin-left: -5px;
+}
+@mixin box {
+    width: 59px;
+  height: 73px;
+    background-color: $tertiary-color;
+  border-radius: 0px 15px 15px 0px;
+}
+@mixin aside-set-up { 
+display: none;
+  justify-content: end;
+  position: relative;
+}
